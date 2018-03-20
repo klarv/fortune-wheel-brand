@@ -1,0 +1,28 @@
+
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Prize Name</th>
+      <th>Prize Type</th>
+      <th>Prize Probability</th>
+      <th>Prize Spots</th>
+      <th>Brand</th>
+      <th>Last Log User</th>
+      <th>Last Log Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prize of prizes">
+      <td>{{prize.prize_value}}</td>
+      <td>{{prize.prize_type}}</td>
+      <td>{{prize.prize_probability}}</td>
+      <td>{{prize.prize_spots}}</td>
+      <td>{{prize.brand_name}}</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+

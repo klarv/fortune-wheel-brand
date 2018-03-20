@@ -1,0 +1,95 @@
+.h1, h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  color: #ef520d;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.tab-content {
+  border-top: 5px solid #337AB7;
+}
+
+li.tab-brand a {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+  color: #fff;
+  background-color: #337ab7;
+  border-radius: 8px 8px 0 0;
+}
+
+.prize-form {
+  border: 2px solid #ddd;
+  margin-top: 25px;
+  padding-bottom: 55px;
+}
+
+.prize-form h3 {
+  background: #ccc;
+  color: #fff;
+  padding: 8px;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+  .slider:hover {
+    opacity: 1;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin: 25px;
+}
+
+.table-bordered {
+  border: 2px solid #ddd;
+}
+
+a.navbar-brand, a.nav-link {
+  color: #fff;
+}
+
+  a.navbar-brand:hover, a.nav-link:hover, a.navbar-brand:focus, a.nav-link:focus, a.navbar-brand:active, a.nav-link:active {
+    color: #ccc;
+    background: none;
+  }
+
+.btn-primary {
+  margin-left: 25%;
+}

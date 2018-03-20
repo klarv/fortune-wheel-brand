@@ -1,0 +1,12 @@
+<h3>Prize edit component</h3>
+
+<form (submit)="update()">
+  <input type="text" name="prize_value" [(ngModel)]="editPrize.prize_value">
+  <input type="text" name="prize_type" [(ngModel)]="editPrize.prize_type">
+  <input type="text" name="prize_probability" [(ngModel)]="editPrize.prize_probability">
+  <input type="text" name="prize_spots" [(ngModel)]="editPrize.prize_spots">
+
+  <button class="btn btn-secondary" type="submit">
+    Udpate
+  </button>
+</form>

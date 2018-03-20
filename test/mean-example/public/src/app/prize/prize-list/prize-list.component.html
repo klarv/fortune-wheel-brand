@@ -1,0 +1,42 @@
+
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Prize Name</th>
+        <th>Prize Type</th>
+        <th>Prize Probability</th>
+        <th>Prize Spots</th>
+        <th>Last Log User</th>
+        <th>Last Log Time</th>
+        <th>Log History</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prize of prizes" >
+        <td>{{prize.prize_value}}</td>
+        <td>{{prize.prize_type}}</td>
+        <td>{{prize.prize_probability}}</td>
+        <td>{{prize.prize_spots}}</td>
+        <td>{{prize.brand}}</td>
+        <td></td>
+        <td><a data-toggle="modal" data-target="#logsModal"><i class="fa fa-history" aria-hidden="true"></i></a></td>
+        <td><a (click)="prize.editable = !prize.editable"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+        <td><a (click)="destroy(prize)"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+<div *ngFor="let prize of prizes">
+  <app-prize-edit
+    *ngIf="prize.editable"
+    [prize]="prize"
+    (updatePrizeEvent)="update($event)"
+  ></app-prize-edit>
+</div>
+
+
+

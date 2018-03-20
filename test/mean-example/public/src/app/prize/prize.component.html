@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <app-prize-new (createNewPrizeEvent)="create($event)"></app-prize-new>
+    </div>
+    <div class="row col-sm-8">
+      <app-prize-list [prizes]="prizes"
+                      (destroyPrizeEvent)="destroy($event)"
+                      (updatePrizeEvent)="update($event)"></app-prize-list>
+    </div>
+  </div>
+</div>
+

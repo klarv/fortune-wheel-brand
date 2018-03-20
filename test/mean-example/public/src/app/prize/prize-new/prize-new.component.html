@@ -1,0 +1,44 @@
+<div class="prize-form">
+  <h3>Create New Prize</h3>
+  <form (submit)="create()" class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label col-sm-4" for="brand_name">Prize Type:</label>
+        <div class="col-sm-8">
+          <select name="brand_name" [(ngModel)]="newPrize.brand_name">
+            <option *ngFor="let b of brands" [value]="b">{{b}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-4" for="prize_value">Prize Type:</label>
+        <div class="col-sm-8">
+          <input class="form-control" type="text" name="prize_value" [(ngModel)]="newPrize.prize_value">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-4" for="prize_type">Prize Type:</label>
+        <div class="col-sm-4" *ngFor="let t of types">
+          <input type="radio" name="prize_type" [value]="t" [(ngModel)]="newPrize.prize_type"> {{t}}
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="prize_probability" class="control-label col-sm-4">Prize Probability:</label>
+        <div class="col-sm-8">
+          <div class="slidecontainer">
+            <input type="range" class="slider" name="prize_probability" min="0" max="1" step="0.1" [(ngModel)]="newPrize.prize_probability">
+            {{newPrize.prize_probability}}
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="prize_spots" class="control-label col-sm-4">Prize Spots Number:</label>
+        <div class="col-sm-8">
+          <input type="number" name="prize_spots" min="0" max="100" [(ngModel)]="newPrize.prize_spots">
+        </div>
+      </div>
+      <button class="btn btn-primary col-sm-6" type="submit">
+        Add New Prize
+      </button>
+</form>
+</div>
